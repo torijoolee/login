@@ -1,0 +1,124 @@
+:root {
+  --color-blue: #1049f8;
+}
+
+.inner {
+  width: 1400px;
+  margin: auto;
+  height: 100%;
+}
+
+/* ################### header ###################  */
+.header {
+  width: 100%;
+  height: 90px;
+  background-color: #f9fbfe;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+}
+.header-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.header-inner h1 {
+  text-indent: -9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  width: 100px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* #####
+############## section: login ###################  */
+
+.log-content {
+  width: 35%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.log-txt {
+  text-align: center;
+  margin-top: 80px;
+}
+.log-txt h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: var(--color-blue);
+}
+.log-txt p {
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 50px;
+}
+.log-sns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+}
+.log-sns a {
+  width: 450px;
+  height: 60px;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.log-sns a span::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: calc(50% - 16px);
+  left: 30px;
+}
+.log-sns a:nth-of-type(1) span:before {
+  background-image: url(../img/kakao.svg);
+}
+.log-sns a:nth-of-type(2) span:before {
+  background-image: url(../img/naver.svg);
+}
+.log-sns a:nth-of-type(3) span:before {
+  background-image: url(../img/google.svg);
+}
+.log-sns a:nth-of-type(4) span:before {
+  background-image: url(../img/apple.svg);
+}
+.log-content > span {
+  margin-top: 50px;
+  font-size: 14px;
+  border-bottom: 1px solid #222;
+}
+.log-sns a:nth-of-type(1) {
+  background-color: #fee500;
+}
+.log-sns a:nth-of-type(2) {
+  background-color: #03c75a;
+  color: #fff;
+}
+.log-sns a:nth-of-type(3) {
+  background-color: #fff;
+}
+.log-sns a:last-of-type {
+  background-color: #333232;
+  color: #fff;
+}
