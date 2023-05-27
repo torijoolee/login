@@ -31,10 +31,136 @@
             <a href="#none"><span>카카오로 로그인</span></a>
             <a href="#none"><span>네이버 계정으로 로그인</span></a>
             <a href="#none"><span>Google 아이디로 로그인</span></a>
-            <a href="#none"><span>Apple로 로그인</span> </a>
+            <a href="#none"><span>mo 회원가입</span> </a>
           </div>
-          <span>이미 MO회원 이신가요?</span>
+          <span>이미 mo회원 이신가요?</span>
         </div>
+      </div>
+    </section>
+    <section class="join">
+      <div class="join-inner inner">
+        <form action="" method="post">
+          <fieldset>
+            <legend>계정 만들기</legend>
+            <!-- name -->
+            <label for="name" class="list">
+              <span>이름</span>
+              <input type="text" name="name" id="name" autocomplete="name" />
+            </label>
+            <!-- birth -->
+            <label for="birth" class="list"
+              ><span>생년월일</span>
+              <input type="text" name="birth" id="birth" placeholder="YYMMDD" />
+            </label>
+            <!-- email -->
+            <label for="email" class="list"
+              ><span>이메일</span>
+              <input
+                type="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                id="email"
+                name="email"
+                autocomplete="email"
+              />
+            </label>
+
+            <!-- address -->
+
+            <div class="address-wrap list">
+              <span>주소</span>
+              <label for="address" class="address">
+                <input type="text" id="postcode" placeholder="우편번호" />
+                <input type="button" value="우편번호 찾기" /><br />
+                <input type="text" id="roadAddress" placeholder="도로명주소" />
+                <input type="text" id="jibunAddress" placeholder="지번주소" />
+                <input type="text" id="detailAddress" placeholder="상세주소" />
+              </label>
+            </div>
+
+            <!-- tel -->
+            <label for="tel" class="list">
+              <span>전화번호</span>
+              <input
+                type="text"
+                placeholder="-없이 번호만 입력해 주세요."
+                name="tel"
+                autocomplete="tel"
+              />
+            </label>
+            <!-- route -->
+            <div class="radio-list route list">
+              <span>앱을 알게된 경로</span>
+              <div class="radio-list-wrap">
+                <label class="radio-item">
+                  <input type="radio" name="radio-item" class="form-input" />
+                  <span class="radio-label">지인 추천</span>
+                </label>
+                <label class="radio-item">
+                  <input type="radio" name="radio-item" class="form-input" />
+                  <span class="radio-label">포털사이트</span>
+                </label>
+                <label class="radio-item">
+                  <input type="radio" name="radio-item" class="form-input" />
+                  <span class="radio-label">SNS 광고</span> </label
+                ><br />
+                <label class="radio-item">
+                  <input type="radio" name="radio-item" class="form-input" />
+                  <span class="radio-label">커뮤니티</span>
+                </label>
+                <label class="radio-item">
+                  <input type="radio" name="radio-item" class="form-input" />
+                  <span class="radio-label">기타</span>
+                </label>
+              </div>
+            </div>
+            <!-- terms -->
+            <div class="terms-list">
+              <label class="terms-item">
+                <input type="checkbox" name="checkbox" class="form-input" />
+                <span class="checkbox-label">아래 mo약관에 모두 동의</span>
+              </label>
+              <label class="terms-item">
+                <div class="terms-left">
+                  <input type="checkbox" name="checkbox" class="form-input" />
+                  <span class="checkbox-label"
+                    >서비스 이용약관 전체 동의 (필수)</span
+                  >
+                </div>
+                <span class="more">내용보기</span>
+              </label>
+              <label class="terms-item">
+                <div class="terms-left">
+                  <input type="checkbox" name="checkbox" class="form-input" />
+                  <span class="checkbox-label"
+                    >개인정보 수집 및 이용 동의 (필수)</span
+                  >
+                </div>
+                <span class="more">내용보기</span>
+              </label>
+              <label class="terms-item">
+                <div class="terms-left">
+                  <input type="checkbox" name="checkbox" class="form-input" />
+                  <span class="checkbox-label"
+                    >마케팅 정보 수신 동의 (선택)</span
+                  >
+                </div>
+
+                <span class="more">내용보기</span>
+              </label>
+              <label class="terms-item">
+                <div class="terms-left">
+                  <input type="checkbox" name="checkbox" class="form-input" />
+                  <span class="checkbox-label"
+                    >선택 정보 (성별) 수신 및 이용 동의 (선택)</span
+                  >
+                </div>
+                <span class="more">내용보기</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <button type="submit">가입 완료</button>
+        </form>
       </div>
     </section>
   </body>

@@ -40,7 +40,7 @@
 ############## section: login ###################  */
 
 .log-content {
-  width: 35%;
+  width: 40%;
   height: 100vh;
   margin: auto;
   display: flex;
@@ -96,13 +96,12 @@
 }
 .log-sns a:nth-of-type(2) span:before {
   background-image: url(../img/naver.svg);
+  background-size: 70%;
 }
 .log-sns a:nth-of-type(3) span:before {
   background-image: url(../img/google.svg);
 }
-.log-sns a:nth-of-type(4) span:before {
-  background-image: url(../img/apple.svg);
-}
+
 .log-content > span {
   margin-top: 50px;
   font-size: 14px;
@@ -121,4 +120,168 @@
 .log-sns a:last-of-type {
   background-color: #333232;
   color: #fff;
+}
+/* form */
+legend {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+fieldset {
+  width: 35%;
+  margin: auto;
+}
+input[type="text"],
+input[type="email"] {
+  outline-style: none;
+  width: 65%;
+  height: 30px;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+/* tel */
+
+label[for="name"],
+label[for="birth"],
+label[for="email"] {
+  display: block;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.list {
+  margin-bottom: 35px;
+  font-size: 0;
+  word-spacing: 0;
+  letter-spacing: 0;
+}
+.list > span {
+  width: 30%;
+  display: inline-block;
+  font-size: 16px;
+}
+/* address */
+.address-wrap {
+  display: flex;
+}
+label.address {
+  width: 70%;
+}
+label.address input {
+  margin-bottom: 10px;
+}
+label.address input[type="button"] {
+  border: none;
+  height: 35px;
+  margin-left: 5px;
+  padding: 0 10px;
+  border-radius: 10px;
+}
+
+/* route*/
+.route {
+  margin-top: 35px;
+}
+.radio-list {
+  margin-bottom: 50px;
+  display: flex;
+}
+
+.radio-list .radio-item {
+  position: relative;
+  display: inline-block;
+  width: 30%;
+  margin-bottom: 10px;
+}
+.radio-list-wrap {
+  width: 70%;
+}
+
+.radio-label {
+  font-size: 14px;
+  position: relative;
+  padding-left: 22px;
+}
+.radio-label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 50%;
+  left: 0;
+  background-color: #eee;
+  border: 2px solid #96aab7;
+  border-radius: 20px;
+  transform: translateY(-55%);
+}
+
+.form-input:checked ~ .radio-label::before {
+  background-color: #0277b4;
+  border: 2px solid #fff;
+}
+/* terms */
+.terms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.terms-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #eee;
+  position: relative;
+}
+.terms-item:first-of-type {
+  margin-bottom: 10px;
+}
+.checkbox-label {
+  margin-left: 8px;
+}
+.checkbox-label::before {
+  content: "";
+  display: inline-block;
+  margin-right: 8px;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #eee;
+  border: 2px solid #96aab7;
+  border-radius: 20px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-55%);
+}
+.terms-list .more {
+  font-size: 14px;
+  margin-right: 15px;
+}
+.terms-list .more::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 6px solid #000;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+}
+.form-input:checked ~ .checkbox-label::before {
+  background-color: #0277b4;
+  border: 2px solid #fff;
 }
