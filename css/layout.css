@@ -1,7 +1,19 @@
+* {
+  font-family: "Noto Sans KR", sans-serif;
+}
 :root {
   --color-blue: #1049f8;
 }
-
+body {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+body.On {
+  position: relative;
+}
 .inner {
   width: 1400px;
   margin: auto;
@@ -16,6 +28,7 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
   position: fixed;
   top: 0;
+  z-index: -1;
 }
 .header-inner {
   height: 100%;
@@ -38,7 +51,6 @@
 
 /* #####
 ############## section: login ###################  */
-
 .log-content {
   width: 40%;
   height: 100vh;
@@ -121,14 +133,63 @@
   background-color: #333232;
   color: #fff;
 }
-/* form */
+/* #####
+############## form ###################  */
+body.On .join {
+  opacity: 1;
+  top: 50px;
+}
+
+.close-btn {
+  all: unset;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: xx-large;
+  cursor: pointer;
+}
+
+.join {
+  position: absolute;
+  top: 100%;
+  background-color: #fff;
+  width: 90%;
+  margin: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 1s;
+  opacity: 0;
+  z-index: 5;
+}
+.bg {
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 1s;
+  visibility: hidden;
+}
+body.On .bg {
+  opacity: 1;
+  visibility: visible;
+}
+
+.join-inner {
+  display: flex;
+  overflow-y: scroll;
+  flex-direction: column;
+  padding: 100px 0;
+}
 legend {
   text-align: center;
   font-size: 30px;
   margin-bottom: 50px;
+  color: var(--color-blue);
 }
 fieldset {
-  width: 35%;
+  width: 36%;
   margin: auto;
 }
 input[type="text"],
@@ -137,11 +198,9 @@ input[type="email"] {
   width: 65%;
   height: 30px;
   border: 1px solid #d8d8d8;
-  border-radius: 10px;
+  border-radius: 5px;
   padding-left: 10px;
 }
-
-/* tel */
 
 label[for="name"],
 label[for="birth"],
@@ -172,6 +231,10 @@ input[type="radio"] {
   display: inline-block;
   font-size: 16px;
 }
+#birth::placeholder {
+  letter-spacing: 1px;
+  opacity: 0.85;
+}
 /* address */
 .address-wrap {
   display: flex;
@@ -185,9 +248,10 @@ label.address input {
 label.address input[type="button"] {
   border: none;
   height: 35px;
-  margin-left: 5px;
+  margin-left: 3px;
   padding: 0 10px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 /* route*/
@@ -236,19 +300,20 @@ label.address input[type="button"] {
 .terms-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  /* gap: 20px; */
 }
 .terms-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  background-color: #eee;
+
   position: relative;
+  margin-top: 20px;
 }
-.terms-item:first-of-type {
+/* .terms-item:first-of-type {
   margin-bottom: 10px;
-}
+} */
 .checkbox-label {
   margin-left: 8px;
 }
@@ -284,4 +349,29 @@ label.address input[type="button"] {
 .form-input:checked ~ .checkbox-label::before {
   background-color: #0277b4;
   border: 2px solid #fff;
+}
+.terms-txt-wrap {
+  width: 98%;
+  height: 0;
+  max-height: 180px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  /* border: 1px solid #d8d9de; */
+  overflow-y: scroll;
+}
+.terms-txt-wrap > p {
+  font-size: 14px;
+  line-height: 25px;
+  padding: 25px;
+  opacity: 0.65;
+}
+button.complete {
+  width: 36%;
+  margin: auto;
+  margin-top: 50px;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-blue);
+  color: #fff;
 }
